@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import {useForm, SubmitHandler} from 'react-hook-form'
 import useAuth from "../hooks/useAuth";
+import netflixLogo from "../public/netflixLogo.png"
 
 interface Inputs {
     email: string
@@ -39,11 +40,11 @@ function login() {
         objectFit="cover"
         />
 
-        <img
-        src="https://rb.gy/ulxxee"
+        <Image
+        src={netflixLogo}
         className="absolute left-4 top-4 cursor-pointer object-contain md:left-10 md:top-6"
-        width={150}
-        height={150}
+        width={100}
+        height={45}
         />
 
         <form
@@ -64,8 +65,8 @@ function login() {
             <button className="w-full rounded bg-[#e50914] py-3 font-semibold" onClick={() => setLogin(true)}>Sign In</button>
 
             <div className="text-[gray]">
-                New to Netflix?{' '}
-                <button type="submit" className="text-white hover:underline" onClick={() => setLogin(false)}>Sign Up now</button>
+                New to Netflix? Fill out the form above and click Sign Up{' '}
+                <button type="submit" className="w-full mt-2 text-white rounded bg-[#e50914] py-3 font-semibold" onClick={() => setLogin(false)}>Sign Up</button>
             </div>
         </form>
     </div>

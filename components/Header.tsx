@@ -1,7 +1,10 @@
 import { BellIcon, SearchIcon } from '@heroicons/react/solid';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import useAuth from '../hooks/useAuth';
+import netflixLogo from "../public/netflixLogo.png"
+import accountLogo from "../public/accountLogo.png"
 
 function Header() {
 
@@ -28,10 +31,10 @@ function Header() {
   return (
     <header className={`${isScrolled && "bg-[#141414]"}`}>
         <div className='flex items-center space-x-2 md:space-x-10 '>
-        <img
-          src="https://rb.gy/ulxxee"
+        <Image
+          src={netflixLogo}
           width={100}
-          height={100}
+          height={45}
           className="cursor-pointer object-contain"
         />
 
@@ -49,14 +52,19 @@ function Header() {
 
             <SearchIcon className='hidden sm:inline h-6 w-6 ' />
             <p className='hidden lg:inline'>Kids</p>
-            <BellIcon className='h-6 w-6' />
+            <BellIcon className='h-10 w-10 pr-4' />
             
-            <img
-            onClick={logout}
-            src="https://rb.gy/g1pwyx"
+    
+            <Link href='/account'>
+            <Image
+            src={accountLogo}
+            width={20}
+            height={20}
             alt=""
+            title='logout'
             className="cursor-pointer rounded"
           />
+            </Link>
            
 
         </div>
