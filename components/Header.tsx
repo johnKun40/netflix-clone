@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import useAuth from '../hooks/useAuth';
 import netflixLogo from "../public/netflixLogo.png"
 import accountLogo from "../public/accountLogo.png"
+import BasicMenu from './BasicMenu';
 
 function Header() {
 
@@ -37,6 +38,9 @@ function Header() {
           height={45}
           className="cursor-pointer object-contain"
         />
+
+
+        <BasicMenu />
 
         <ul className="hidden space-x-4 md:flex">
             <li className='headerLink'>Home</li>

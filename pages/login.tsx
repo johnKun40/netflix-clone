@@ -50,7 +50,7 @@ function login() {
         <form
         onSubmit={handleSubmit(onSubmit)}
          className="relative mt-24 space-y-8 rounded bg-black/75 py-10 px-6 md:mt-0 md:max-w-md md:px-14">
-            <h1 className="text-4xl font-semibold">Sign In</h1>
+            <h1 className="text-4xl font-semibold">Sign In / Sign Up</h1>
             <div className="space-y-4">
                 <label className="inline-block w-full">
                     <input type="email" placeholder="Email" className="input" {...register('email', {required: true})}/>

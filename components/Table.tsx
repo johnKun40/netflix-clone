@@ -38,7 +38,7 @@ function Table({products, selectedPlan}: Props) {
               }`}
               key={product.id}
             >
-              {product.metadata.Resolution}
+              {product.metadata.resolution}
             </td>
           ))}
         </tr>
@@ -55,7 +55,7 @@ function Table({products, selectedPlan}: Props) {
               }`}
               key={product.id}
             >
-              {product.metadata.portability === 'true' && (
+              {product.metadata.portability === "true" && (
                 <CheckIcon className="inline-block h-8 w-8" />
               )}
             </td>
