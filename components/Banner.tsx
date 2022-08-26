@@ -7,6 +7,7 @@ import { InformationCircleIcon } from '@heroicons/react/solid'
 import { useRecoilState } from 'recoil'
 import { modalState, movieState } from '../atoms/modalAtom'
 
+
 interface Props {
     netflixOriginals: Movie[]
 }
